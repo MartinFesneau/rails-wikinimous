@@ -1,0 +1,15 @@
+
+
+<div class="container-fluid largeur">
+<%= link_to "Back to list", articles_path, {class: "btn btn-primary mb-3"} %>
+  <h2> <%= @article.title%></h2>
+  <p><%= @article.content%></p>
+  <%= link_to edit_article_path do%>
+        <i class="fas fa-pencil-alt"></i>
+        <% end %>
+    <%= link_to article_path,
+      method: :delete,
+      data: {confirm: 'Are you sure ?'} do %>
+        <i class="fas fa-dumpster-fire"></i>
+        <% end %>
+</div>
